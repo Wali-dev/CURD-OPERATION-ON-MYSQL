@@ -1,0 +1,49 @@
+{
+    "sales": [
+        {
+            "product_id": 1,
+            "quantity_sold": 6,
+            "sale_date": "2024-02-11"
+        },
+        {
+            "product_id": 4,
+            "quantity_sold": 1,
+            "sale_date": "2024-02-11"
+        },
+        {
+            "product_id": 7,
+            "quantity_sold": 1,
+            "sale_date": "2024-02-11"
+        },
+        {
+            "product_id": 7,
+            "quantity_sold": 5,
+            "sale_date": "2024-02-11"
+        },
+        {
+            "product_id": 1,
+            "quantity_sold": 6,
+            "sale_date": "2024-02-11"
+        },
+        {
+            "product_id": 8,
+            "quantity_sold": 500,
+            "sale_date": "2024-02-11"
+        },
+        {
+            "product_id": 5,
+            "quantity_sold": 110,
+            "sale_date": "2024-02-11"
+        },
+        {
+            "product_id": 12,
+            "quantity_sold": 20,
+            "sale_date": "2024-02-11"
+        },
+        {
+            "product_id": 12,
+            "quantity_sold": 200,
+            "sale_date": "2024-02-11"
+        }
+    ]
+}

@@ -1,11 +1,24 @@
 const cron = require("node-cron")
 const saleCronJobController = require("../controllers/saleCronJobController")
+const fakeData = require("../data/fakeSaleData.json")
+
 
 // Schedule cron job to run every hour
 cron.schedule('* * * * * *', () => {
 
-saleCronJobController.getAllSales()
-  // Call your cron job function here
-  // For example: fetchDataAndPostToSales();
-  console.log('Cron job running...');
+  let data = fakeData.sales;
+  const dataLen = data.length;
+  // latest sale data is on the last object of this fake database. So, we are going to select the last data to append in our sale table
+  data = data[dataLen - 1]
+
+  const saleData = {
+    product_id: data.product_id,
+    quantity_sold: data.quantity_sold,
+    sale_date: data.sale_date
+  }
+  // Calling functions
+  saleCronJobController.addSale(saleData)
+
+  console.log('Posting sale data on sales table is running...');
 });
+
