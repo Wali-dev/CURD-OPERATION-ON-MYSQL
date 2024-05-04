@@ -7,9 +7,9 @@ const Sale = {
     return rows;
   },
 
-  create: async (product) => {
-    const [result] = await pool.query('INSERT INTO sales SET ?', product);
-    return { id: result.insertId, ...product };
+  create: async (sale) => {
+    const [result] = await pool.query('INSERT INTO sales SET ?', sale);
+    return { id: result.insertId, ...sale };
   }
 };
 

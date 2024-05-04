@@ -1,4 +1,5 @@
-const Product = require("../models/productModel")
+const Product = require("../models/productModel");
+const logger = require("../utils/logger/index");
 
 const productController = {
     getAllProducts: async (req, res) => {
@@ -7,6 +8,7 @@ const productController = {
             res.send(products);
         } catch (error) {
             res.status(500).json({ error: error.message });
+            logger.debug("Can not fetch products from DB, File: productController.js")
         }
     },
 
@@ -20,6 +22,7 @@ const productController = {
             res.send(product);
         } catch (error) {
             res.status(500).json({ error: error.message });
+            logger.debug("Can not fetch particuler product from DB, File: productController.js")
         }
     },
 
@@ -30,6 +33,7 @@ const productController = {
             res.status(201).send(newProduct);
         } catch (error) {
             res.status(500).json({ error: error.message });
+            logger.debug("Can not add product, File: productController.js")
         }
     },
 
@@ -41,6 +45,7 @@ const productController = {
             res.json(updatedProduct);
         } catch (error) {
             res.status(500).send({ error: error.message });
+            logger.debug("Can not add update product, File: productController.js")
         }
     },
 
@@ -51,6 +56,7 @@ const productController = {
                 res.send({ message: 'Product deleted successfully' });
             } catch (error) {
                 res.status(500).json({ error: error.message });
+                logger.debug("Can not delete product, File: productController.js")
             }
         }
     }

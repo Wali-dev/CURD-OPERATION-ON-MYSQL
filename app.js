@@ -9,9 +9,6 @@ app.use(express.json());
 // Routes
 app.use("/products", productRouter);
 
-
-
-
 // Error handler
 app.use((req, res)=>{
     res.status(404).send("There is no such route")
