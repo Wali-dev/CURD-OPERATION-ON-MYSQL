@@ -1,4 +1,3 @@
-
 const pool = require('../config/database');
 
 const Product = {

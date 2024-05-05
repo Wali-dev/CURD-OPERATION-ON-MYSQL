@@ -7,15 +7,17 @@ require("dotenv").config();
 
 const debugLogger = () => {
 
+  //Declaring format of logs, want to save
   const myFormat = printf(({ level, message, timestamp }) => {
     return `${timestamp} ${level}: ${message}`;
   });
 
+  //creating pool for saving logs to db
   const options_default = {
-    host: 'localhost',
-    user: 'root',
-    password: 'demopass123',
-    database: 'test_db',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     table: 'sys_logs_default'
 };
 
@@ -35,4 +37,4 @@ const debugLogger = () => {
   });
 }
 
-module.exports = debugLogger
+module.exports = debugLogger;
