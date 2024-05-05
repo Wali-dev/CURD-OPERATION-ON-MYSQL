@@ -14,15 +14,7 @@ winston, winston-mysql and nodemon.
 ## Authentication
 Authentication is not required for accessing the endpoints.
 
-## Configure your .env file
-```bash
-PORT = 8000
 
-DB_HOST = "host name"
-DB_USER = "db user name"
-DB_NAME = "db name"
-DB_PASS = "db password"
-```
 
 ## Run Locally
 
@@ -42,6 +34,15 @@ Install dependencies
 
 ```bash
   npm install
+```
+ Configure your .env file
+```bash
+PORT = 8000
+
+DB_HOST = "host name"
+DB_USER = "db user name"
+DB_NAME = "db name"
+DB_PASS = "db password"
 ```
 
 Start the server
