@@ -276,7 +276,7 @@ See the [Get logs section](#logger) to know more.
         └── logRoute.js     //route for getting logs from db
         └── productRoute.js    //route for product CURD
     └── 📁utils
-        └── cronJob.js
+        └── cronJob.js    //cron job logics
         └── 📁logger     //logging funtionality
             └── debugLogger.js
             └── index.js
